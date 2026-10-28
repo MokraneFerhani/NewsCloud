@@ -5,9 +5,9 @@ A simple Flutter app that fetches the latest US headlines from NewsAPI and shows
 ## Preview
 
 <p align="center">
-  <img src="screenshots/screen (1).jpeg" width="250" alt="Home page">
-  <img src="screenshots/screen (2).jpeg" width="250" alt="Category page">
-  <img src="screenshots/screen (3).jpeg" width="250" alt="News list">
+  <img src="screen%20(1).jpeg" width="250" alt="Home page">
+  <img src="screen%20(2).jpeg" width="250" alt="Category page">
+  <img src="screen%20(3).jpeg" width="250" alt="News list">
 </p>
 
 ## Features
