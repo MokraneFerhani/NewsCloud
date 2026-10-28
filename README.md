@@ -1,17 +1,37 @@
-# newsapp
+# NewsCloud
 
-A new Flutter project.
+A simple Flutter app that fetches the latest US headlines from NewsAPI and shows them in a scrollable feed. Pick a category to browse news by topic.
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="screenshots/screen(1).jpg" width="250" alt="Home page">
+  <img src="screenshots/screen(2).jpg" width="250" alt="Category page">
+  <img src="screenshots/screen(3).jpg" width="250" alt="News list">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Seven categories: Business, Entertainment, Health, Science, Technology, Sports and General
+- Live headlines from NewsAPI, each with an image, a title and a short description
+- Loading spinner while the news is being fetched
+- Articles with broken images are hidden automatically
+- Simple navigation between the home page and category pages
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How it works
+
+One `NewsListViewBuilder` is reused on every screen. It receives a category, calls `NewsService` once in `initState`, and uses a `FutureBuilder` to show a spinner, an error message, or the list of articles.
+
+`main.dart` → `HomeView` → `CategoriesListView` → `CategoryCard` → `CategoryView` → `NewsListViewBuilder` → `NewsListView` → `NewsTile`
+
+## What I learned
+
+- Making API calls with Dio and `Future` / `async` / `await`
+- Turning JSON into models (`ArticleModel`, `CategoryModel`)
+- Showing loading, error and data states with `FutureBuilder`
+- Building a scrolling page with `CustomScrollView` and slivers
+- Navigating between pages with `Navigator.push`
+
+## Acknowledgment
+
+This project was built while learning from **Complete Flutter & Dart Development Course [Arabic]** by **Tharwat Samy**.
